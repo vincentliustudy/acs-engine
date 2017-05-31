@@ -53,6 +53,31 @@ workflow for doing this is as follows:
    do your work on that branch.
 5. When you are ready for us to review, push your branch to GitHub, and
    then open a new pull request with us.
+   
+For Git commit messages, we follow the [Semantic Commit Messages](http://karma-runner.github.io/0.13/dev/git-commit-msg.html):
+
+```
+fix(engine): add --foo-version flag to 'helm install'
+
+When parameter `--foo-version bar` is provided, FooVersion will use the version specified.
+Closes #1234
+```
+
+Common commit types:
+
+- fix: Fix a bug or error
+- feat: Add a new feature
+- docs: Change documentation
+- test: Improve testing
+- ref: refactor existing code
+
+Common scopes:
+
+- engine: The acs-engine core API
+- kubernetes: Kubernetes orchestrator changes
+- dcos: DC/OS  orchestrator changes
+- swarm: Docker SwarmMode orchestrator changes
+- `*`: two or more scopes
 
 ### Go Conventions
 
