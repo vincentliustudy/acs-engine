@@ -118,6 +118,7 @@ function deploy_template() {
 		--resource-group "${RESOURCE_GROUP}" \
 		--template-file "${OUTPUT}/azuredeploy.json" \
 		--parameters "@${OUTPUT}/azuredeploy.parameters.json"
+	echo "deployment created"
 }
 
 function scale_agent_pool() {
