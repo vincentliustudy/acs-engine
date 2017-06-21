@@ -109,8 +109,10 @@ function deploy_template() {
 
 	# Deploy the template
 	az group create --name="${RESOURCE_GROUP}" --location="${LOCATION}"
-
+	echo"resouce group name is ${RESOURCE_GROUP}"
 	sleep 3 # TODO: investigate why this is needed (eventual consistency in ARM)
+	echo "$(cat ${OUTPUT}/azuredeploy.json)"
+	echo "$(cat ${OUTPUT}/azuredeploy.parameters.json)"
 	az group deployment create \
 		--name "${DEPLOYMENT_NAME}" \
 		--resource-group "${RESOURCE_GROUP}" \
